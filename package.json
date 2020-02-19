@@ -1,0 +1,17 @@
+{
+  "name": "NodePractico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon api/index.js" 
+  },
+  "keywords": [],
+  "author": "Aarón Mercado Hurtado",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
