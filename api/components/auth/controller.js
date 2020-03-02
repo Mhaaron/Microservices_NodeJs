@@ -2,6 +2,8 @@ const bcrypt = require('bcrypt')
 const auth = require('../../../auth')
 const TABLA = 'auth'
 
+const error = require('../../../utils/error')
+
 module.exports = (injectedStore) => {
     let store = injectedStore
     if (!store) {
@@ -10,14 +12,14 @@ module.exports = (injectedStore) => {
 
 async function login(username, password) {
         const data = await store.query(TABLA, {username: username})
-        
+
         return bcrypt.compare(password, data.password)
             .then(songiguales => {
                 if (songiguales == true) {
                     //TOKEN
                     return auth.sign(data)
                 } else {
-                    throw new Error('Información invañida')
+                    throw error('Información invalida', 400)
                 }
             })
     }

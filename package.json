@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon api/index.js"
+    "server": "nodemon api/index.js",
+    "mysql": "nodemon mysql/index-mysql.js",
+    "post": "nodemon post/index-post.js"
   },
   "keywords": [],
   "author": "Aarón Mercado Hurtado",
@@ -15,8 +17,10 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
     "nanoid": "^2.1.11",
     "nodemon": "^2.0.2",
+    "request": "^2.88.2",
     "swagger-ui-express": "^4.1.3"
   }
 }
