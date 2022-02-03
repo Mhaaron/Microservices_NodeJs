@@ -1,5 +1,6 @@
 module.exports = {
-    api: {
+    //basic configuration
+	api: {
         port: process.env.API_PORT || 3000
     },
     post: {
